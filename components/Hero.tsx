@@ -36,8 +36,8 @@ const Hero = () => {
   }, []);
   return (
     <section ref={containerRef} className="flex flex-col h-svh justify-center max-w-[1300px] mx-auto overflow-hidden">
-      <h2 className="line-1 text-4xl pl-4">Let's build something</h2>
-      <h1 className="line-2  text-[160px] leading-none bg-linear-to-r from-[#fcad37] to-red-500/70 bg-clip-text text-transparent">
+      <h2 className="line-1 text-4xl pl-4">Let&apos;s build something</h2>
+      <h1 className="line-2 text-[160px] w-fit leading-none bg-linear-to-r  from-[#fcce37] to-red-500/70 bg-clip-text text-transparent">
         BIG
       </h1>
       <h2 className="line-3 text-4xl pl-4">Together</h2>

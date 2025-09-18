@@ -2,9 +2,10 @@
 import { OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import React, { useRef } from "react";
+import * as THREE from "three";
 
 const Scene = () => {
-  const meshRef = useRef(null) as any;
+  const meshRef = useRef<THREE.Mesh>(null);
 
   useFrame(() => {
     if (meshRef.current) {
@@ -16,10 +17,11 @@ const Scene = () => {
     <>
       <ambientLight intensity={1} />
       <OrbitControls enablePan={false} enableZoom={false} />
-      <directionalLight position={[-1, 0, 5]} intensity={2} color={"red"} />
+      <directionalLight position={[-1, 0, 5]} intensity={1} color={"white"} />
       <mesh position={[0, 0, 0]} ref={meshRef} rotation={[Math.PI / 3, 0, 0]}>
-        <sphereGeometry args={[1, 64, 64]} />
-        <meshStandardMaterial color={"yellow"} metalness={1} roughness={0.4} wireframe />
+        {/* <sphereGeometry args={[1, 64, 64]} /> */}
+        <torusKnotGeometry args={[1, 0.4, 124, 20]} />
+        <meshStandardMaterial color={"red"} metalness={1} wireframe roughness={0.5} />
       </mesh>
     </>
   );
