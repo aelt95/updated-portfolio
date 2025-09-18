@@ -17,11 +17,11 @@ const Scene = () => {
     <>
       <ambientLight intensity={1} />
       <OrbitControls enablePan={false} enableZoom={false} />
-      <directionalLight position={[-1, 0, 5]} intensity={1} color={"white"} />
+      <directionalLight position={[-1, 0, 5]} intensity={1} color={"red"} />
       <mesh position={[0, 0, 0]} ref={meshRef} rotation={[Math.PI / 3, 0, 0]}>
         {/* <sphereGeometry args={[1, 64, 64]} /> */}
-        <torusKnotGeometry args={[1, 0.4, 124, 20]} />
-        <meshStandardMaterial color={"red"} metalness={1} wireframe roughness={0.5} />
+        <torusKnotGeometry args={[1, 0.4, 124, 40]} />
+        <meshStandardMaterial color={"white"} metalness={1} wireframe roughness={0.4} />
       </mesh>
     </>
   );
